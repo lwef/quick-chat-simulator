@@ -7,14 +7,13 @@ const Footer = () => {
             <div className="footer__show">
                 this is footer
             </div>
-            <div className="footer__code">
-                code
-            </div>
-            <div className="footer__copy">
+            <input placeholder='write your word'/>
+            <input className="footer__code" placeholder='code'/>
+            <button>
                 copy
-            </div>
+            </button>
         </div>
     )
 }
-
+//<button className="footer__copy">
 export default Footer;
