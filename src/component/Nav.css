@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.navbar__logo {
+    font-size: 23px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    width: 30%;
+    background-color: aquamarine;
+    border-radius: 3px;
+}
