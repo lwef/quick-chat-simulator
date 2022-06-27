@@ -12,6 +12,13 @@
     background-color: cornsilk;
 }
 
+.main__colorPick2 {
+    width: 500px;
+    height: 300px;
+    margin: 10px;
+    background-color: cornsilk;
+}
+
 .colorWrap {
     margin: 10px;
     display: flex;
@@ -19,9 +26,10 @@
     justify-content: space-evenly;
 }
 
-.colorWrap > div {
+.colorWrap div {
     width: 30px;
     height: 30px;
+    border-radius: 5px;
 }
 
 .main__smallBox {
