@@ -5,6 +5,25 @@ import { ChromePicker } from 'react-color';
 
 function Main() {
     const [color, setColor] = useState('');
+    const [bold, SetBold] = useState('');
+    const [size, SetSize] = useState('');
+    const [italic, SetItalic] = useState('');
+
+    var data = ["", "", "", ""]; //color, bold, size, italic
+    data[0] = color;
+    data[1] = bold;
+    data[2] = size;
+    data[3] = italic;
+    /*
+    const [data, setData] = useState(
+        {
+            color: null,
+            bold: null,
+            size: null, 
+            italic: null
+        }
+    );
+    */
     
     const colorPicker1 = () => {
         const colorSet = ["red", "yellow", "blue", "aqua", "olive", "silver", "maroon", "navy", "white", "black",
@@ -39,9 +58,24 @@ function Main() {
         return result;
     }
 
+    /*
+    const onChangeBold = (params, e) => {
+        console.log(params);
+        e.preventDefault();
+        SetBold(params);
+      }
+    */
+    const onChangeSize = (size) => {
+        SetSize(size);
+    }
+    const onChangeItalic = (params, e) => {
+        e.preventDefault();
+        SetItalic(params);
+    }
+
     return (
         <div className='main'>
-            <Footer/>
+            <Footer sendData={data}/>
             <div className='main__colorPick' style={{background:color}}>
                 choose color #1<br/>
                 <div className='colorWrap'>
@@ -63,20 +97,21 @@ function Main() {
             </div>
             <div className='main__smallBox'>
                 select bold ?
-                <button>yes</button>
-                <button>no</button>
+                <button onClick={() => SetBold(true)}>yes</button>
+                <button onClick={() => SetBold(false)}>no</button>
             </div>
             <div className='main__smallBox'>
                 select size<br/>
-                <select name="pets" id="pet-select">
+                <select value={size} onChange={(e) => {onChangeSize(e.target.value)}}>
                     {chatSize()}
                 </select>
             </div>
             <div className='main__smallBox'>
                 select italic ?
-                <button>yes</button>
-                <button>no</button>
+                <button onClick={(e)=>{onChangeItalic(true, e)}}>yes</button>
+                <button onClick={(e)=>{onChangeItalic(false, e)}}>no</button>
             </div>
+            <div style={{height:100}}></div>
         </div>
     )
 }
