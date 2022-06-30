@@ -43,21 +43,32 @@ const Footer = (data) => {
     }
     */
 
+    const handleCopy = () => {
+        try {
+            navigator.clipboard.writeText(code);
+            alert("copy success!");
+        } catch {
+            alert("copy error");
+        }
+    }
+
     return (
         <div className="footer">
             <div className="footer__show">
                 this is footer
             </div>
             <input placeholder='write your word' value={word} onChange={onChangeWord}/>
+            <div>
             <input 
                 className="footer__code" 
                 placeholder='code'
                 value={code} /* value={data.sendData} */
                 readOnly
             />
-            <button className="footer__copy">
+            <button onClick={handleCopy}>
                 copy
             </button>
+            </div>
         </div>
     )
 }
