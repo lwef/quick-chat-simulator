@@ -4,10 +4,10 @@ import './Main.css';
 import { ChromePicker } from 'react-color';
 
 function Main() {
-    const [color, setColor] = useState('');
-    const [bold, SetBold] = useState('');
-    const [size, SetSize] = useState('');
-    const [italic, SetItalic] = useState('');
+    const [color, setColor] = useState(false);
+    const [bold, setBold] = useState(false);
+    const [size, setSize] = useState(0);
+    const [italic, setItalic] = useState(false);
 
     var data = ["", "", "", ""]; //color, bold, size, italic
     data[0] = color;
@@ -66,11 +66,11 @@ function Main() {
       }
     */
     const onChangeSize = (size) => {
-        SetSize(size);
+        setSize(size);
     }
     const onChangeItalic = (params, e) => {
         e.preventDefault();
-        SetItalic(params);
+        setItalic(params);
     }
 
     return (
@@ -93,18 +93,20 @@ function Main() {
                     value={color}
                     onChange={e => handleColorChange(e.target.value)}
                 />
+                <button onClick={() => setColor(false)}>default color</button>
                 </center>
             </div>
             <div className='main__smallBox'>
                 select bold ?
-                <button onClick={() => SetBold(true)}>yes</button>
-                <button onClick={() => SetBold(false)}>no</button>
+                <button onClick={() => setBold(true)}>yes</button>
+                <button onClick={() => setBold(false)}>no</button>
             </div>
             <div className='main__smallBox'>
                 select size<br/>
                 <select value={size} onChange={(e) => {onChangeSize(e.target.value)}}>
                     {chatSize()}
                 </select>
+                <button onClick={() => setSize(0)}>default size</button>
             </div>
             <div className='main__smallBox'>
                 select italic ?
