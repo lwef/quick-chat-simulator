@@ -35,7 +35,7 @@ const Footer = (data) => {
 
 
     const onChangeWord = (e) => { 
-        setWord(e.target.value);
+        setWord(e.target.value); //->useEffect
     };
     /*
     const handleCodeChange = (param) => {
@@ -52,22 +52,39 @@ const Footer = (data) => {
         }
     }
 
+    const alertMaxLength = () => {
+        if(code.length>30) {
+            return (
+                <div>
+                    <div>길이 제한 초과입니다. 다시 조정해 주세요</div>
+                    <div>your code is longer than maxlength</div>
+                </div>
+            )
+        }
+        else {
+            return (
+                <div></div>
+            )
+        }
+    }
+
     return (
         <div className="footer">
             <div className="footer__show">
                 this is footer
             </div>
-            <input placeholder='write your word' value={word} onChange={onChangeWord}/>
+            <input placeholder='write your word' value={word} maxLength = '30' onChange={onChangeWord}/>
             <div>
-            <input 
-                className="footer__code" 
-                placeholder='code'
-                value={code} /* value={data.sendData} */
-                readOnly
-            />
-            <button onClick={handleCopy}>
-                copy
-            </button>
+                <input 
+                    className="footer__code" 
+                    placeholder='code'
+                    value={code} /* value={data.sendData} */
+                    readOnly
+                />
+                {alertMaxLength()}
+                <button onClick={handleCopy}>
+                    copy
+                </button>
             </div>
         </div>
     )
