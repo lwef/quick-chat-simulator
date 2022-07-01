@@ -9,6 +9,13 @@ function Main() {
     const [size, setSize] = useState(0);
     const [italic, setItalic] = useState(false);
 
+    const [boldColor, setBoldColor] = useState('#f16969'); //red
+    const [italicColor, setItalicColor] = useState('#f16969'); 
+    const [colorbutton, setColorButton] = useState('#a7ffa7'); //green
+    const [sizeButtonColor, setSizeButtonColor] = useState('#a7ffa7');
+    const [boldState, setBoldState] = useState('no');
+    const [italicState, setItalicState] = useState('no');
+
     var data = ["", "", "", ""]; //color, bold, size, italic
     data[0] = color;
     data[1] = bold;
@@ -34,6 +41,7 @@ function Main() {
             result.push(<div key={i} style={{background:colorSet[i]}} onClick = {()=> {
                 console.log(colorSet[i]);
                 setColor(colorSet[i]);
+                setColorButton('#f16969'); //default color 버튼 비활성화의 표시로 빨간색으로 바꿈
             }}></div>);
         }
         return result;
@@ -48,6 +56,7 @@ function Main() {
 
     const handleColorChange = useCallback((color) => {
         setColor(color);
+        setColorButton('#f16969'); //default color 버튼 비활성화의 표시로 빨간색으로 바꿈
     }, [color]) //컬러 데이터가 바뀔때마다 이 함수는 갱신된다.
 
     const chatSize = () => {
@@ -58,19 +67,44 @@ function Main() {
         return result;
     }
 
-    /*
-    const onChangeBold = (params, e) => {
-        console.log(params);
+    const onChangeBold = (e) => {
         e.preventDefault();
-        SetBold(params);
+        setBold(!bold);
+        //console.log(bold);
+        
+        if(boldState==='yes') {
+            setBoldState('no');
+            setBoldColor('#f16969');
+        }
+        else {
+            setBoldState('yes');
+            setBoldColor('#a7ffa7');
+        }
       }
-    */
     const onChangeSize = (size) => {
         setSize(size);
+        setSizeButtonColor('#f16969');
     }
-    const onChangeItalic = (params, e) => {
+    const onChangeItalic = (e) => {
         e.preventDefault();
-        setItalic(params);
+        setItalic(!italic);
+        
+        if(italicState==='yes') {
+            setItalicState('no');
+            setItalicColor('#f16969');
+        }
+        else {
+            setItalicState('yes');
+            setItalicColor('#a7ffa7');
+        }
+    }
+    const handleColorDefault = () => {
+        setColor(false);
+        setColorButton('#a7ffa7'); //default color 버튼 활성화의 표시로 초록색으로 바꿈
+    }
+    const handleSizeDefault = () => {
+        setSize(0);
+        setSizeButtonColor('#a7ffa7');
     }
 
     return (
@@ -93,25 +127,23 @@ function Main() {
                     value={color}
                     onChange={e => handleColorChange(e.target.value)}
                 />
-                <button onClick={() => setColor(false)}>default color</button>
+                <button style={{background:colorbutton}}onClick={handleColorDefault}>default color</button>
                 </center>
             </div>
             <div className='main__smallBox'>
                 select bold ?
-                <button onClick={() => setBold(true)}>yes</button>
-                <button onClick={() => setBold(false)}>no</button>
+                <button style={{background:boldColor}} onClick={onChangeBold}>{boldState}</button>
             </div>
             <div className='main__smallBox'>
                 select size<br/>
                 <select value={size} onChange={(e) => {onChangeSize(e.target.value)}}>
                     {chatSize()}
                 </select>
-                <button onClick={() => setSize(0)}>default size</button>
+                <button style={{background:sizeButtonColor}}onClick={handleSizeDefault}>default size</button>
             </div>
             <div className='main__smallBox'>
                 select italic ?
-                <button onClick={(e)=>{onChangeItalic(true, e)}}>yes</button>
-                <button onClick={(e)=>{onChangeItalic(false, e)}}>no</button>
+                <button style={{background:italicColor}} onClick={onChangeItalic}>{italicState}</button>
             </div>
             <div style={{height:100}}></div>
         </div>
