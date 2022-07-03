@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import mit from './mit.txt';
 import apache20 from './apache2.0.txt';
+import bsd3 from './BSD3.txt';
 
 const License = (data) => {
     const [text, setText] = useState("");
@@ -19,7 +20,7 @@ const License = (data) => {
     };
 
     useEffect(() => {
-        console.log(data);
+        //console.log(data);
         try {
             if(license.type === "mit") {
                 fetch(mit)
@@ -35,6 +36,14 @@ const License = (data) => {
                     return res.text();
                 }).then(function (data) {
                     data = data + "\n" + license.copyright;
+                    setText(data);
+                })
+            } else if(license.type === "BSD 3-Clause") {
+                fetch(bsd3)
+                .then(function(res){
+                    return res.text();
+                }).then(function (data) {
+                    data = "// " + license.copyright + " " + data;
                     setText(data);
                 })
             }

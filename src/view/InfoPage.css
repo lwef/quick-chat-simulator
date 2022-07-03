@@ -67,6 +67,7 @@ html {
 }
 
 .InfoPage__box .license {
+    text-align: left;
     border-radius: 3px;
     clear: both;
     padding: 16px;
@@ -76,5 +77,3 @@ pre {
     white-space: pre;
     overflow: auto;
 }
-
-xmp{ white-space:pre-wrap; word-wrap:break-word; }
