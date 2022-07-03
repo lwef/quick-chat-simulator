@@ -1,0 +1,80 @@
+html {
+    --google-blue-50: rgb(232, 240, 254);
+    --google-blue-300: rgb(138, 180, 248);
+    --google-blue-600: rgb(26, 115, 232);
+    --google-blue-900: rgb(23, 78, 166);
+    --google-grey-200: rgb(232, 234, 237);
+    --google-grey-800: rgb(60, 64, 67);
+    --google-grey-900: rgb(32, 33, 36);
+  
+    --interactive-color: var(--google-blue-600);
+    --primary-color: var(--google-grey-900);
+  
+    --product-background: var(--google-blue-50);
+    --product-text-color: var(--google-blue-900);
+  
+    background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+      --interactive-color: var(--google-blue-300);
+      --primary-color: var(--google-grey-200);
+  
+      --product-background: var(--google-grey-800);
+      --product-text-color: var(--google-grey-200);
+  
+      background: var(--google-grey-900);
+    }
+}
+
+#intro {
+    margin-top: 10px;
+}
+
+.InfoPage__box {
+    background-color: var(--product-background);
+    border-radius: 5px;
+    color: var(--product-text-color);
+    margin-top: 16px;
+    margin-left: 5px; /*add*/
+    margin-right: 5px;
+    overflow: auto;
+    max-width: 1020px;
+    padding: 2px;
+}
+
+.InfoPage__box .title {
+    float: left;
+    font-size: 110%;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.InfoPage__box .homepage {
+    color: var(--interactive-color);
+    float: right;
+    margin: 3px;
+    text-align: end;
+}
+
+.InfoPage__box .showButton {
+    float: right;
+    margin: 3px;
+    text-align: end;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.InfoPage__box .license {
+    border-radius: 3px;
+    clear: both;
+    padding: 16px;
+}
+
+pre {
+    white-space: pre;
+    overflow: auto;
+}
+
+xmp{ white-space:pre-wrap; word-wrap:break-word; }
