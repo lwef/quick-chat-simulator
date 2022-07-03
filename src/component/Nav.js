@@ -9,12 +9,16 @@ const Nav = () => {
     return (
         <div className='navbar'>
             <div className='navbar__logo'
-                style={{fontWeight: path === '/' && 'bold' }} 
-                onClick={() => navigate('/')}
+                style={{fontWeight: path === '/Main' && 'bold' }} 
+                onClick={() => navigate('/Main')}
             >
                 QuickChat Simulator
             </div>
             <ul className='navbar__menu'>
+                <div 
+                    style={{fontWeight: path === '/Main' && 'bold' }} 
+                    onClick={() => navigate('/Main')}
+                >Main</div>
                 <div 
                     style={{fontWeight: path === '/HowToUsePage' && 'bold' }} 
                     onClick={() => navigate('/HowToUsePage')}
@@ -23,10 +27,6 @@ const Nav = () => {
                     style={{fontWeight: path === '/InfoPage' && 'bold' }} 
                     onClick={() => navigate('/InfoPage')}
                 >Info</div>
-                <div 
-                    style={{fontWeight: path === '/QuickChatWord' && 'bold' }} 
-                    onClick={() => navigate('/QuickChatWord')}
-                >퀵챗에 넣을 말</div>
             </ul>
         </div>
     )

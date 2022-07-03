@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './InfoPage.css';
 import License from './License';
 
@@ -62,10 +62,10 @@ function InfoPage() {
     ]
 
     return (
-    <div>
+    <center>
         <div id='intro'>
             <h2>Information</h2>
-            This is a fan website of the game "Castle Defense Online". <br/>
+            This is a fan website of the game<br/> "Castle Defense Online". <br/><br/>
             Supported tag, supported color information is based on the Unity official &nbsp;
             <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">documentation.</a>
         </div>
@@ -89,7 +89,7 @@ function InfoPage() {
             <h2>Developer</h2>
             <p onClick={()=>{alert("nickname: 비올")}}>lwef</p>
         </div>
-    </div>
+    </center>
     )
 }
 
