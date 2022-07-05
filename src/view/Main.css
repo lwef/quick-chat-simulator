@@ -6,35 +6,63 @@
 }
 
 .main__colorPick {
-    width: 500px;
-    height: 80px;
+    width: 340px;
     margin: 10px;
     background-color: cornsilk;
 }
 
 .main__colorPick2 {
     width: 500px;
-    height: 300px;
     margin: 10px;
     background-color: cornsilk;
+}
+
+center {
+    margin-bottom: 5px;
 }
 
 .colorWrap {
     margin: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.colorWrap div {
+.paletteColor {
+    margin: 3px;
     width: 30px;
     height: 30px;
     border-radius: 5px;
 }
 
+.main__smallBoxContainer {
+    display: flex;
+    flex-direction: row;
+}
+
 .main__smallBox {
     width: 100px;
-    height: 50px;
+    height: 70px;
     margin: 10px;
     background-color: cornsilk;
+}
+
+button {
+    border-radius: 3px;
+}
+
+/* Mobile Device */
+@media screen and (max-width: 600px) {
+    .main__colorPick {
+        width: 80%;
+    }
+    .main__colorPick2 {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .main__smallBoxContainer {
+        flex-direction: column;
+    }
 }

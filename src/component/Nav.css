@@ -18,3 +18,8 @@
     background-color: aquamarine;
     border-radius: 3px;
 }
+
+.navbar__menu div:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
