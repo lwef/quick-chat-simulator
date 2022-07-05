@@ -11,6 +11,7 @@ const SetRoute = () => {
   
   return (
       <Routes>
+        <Route exact path="/" element={<Main/>} />
         <Route exact path="/Main" element={<Main/>} />
         <Route exact path="/InfoPage" element={<InfoPage/>} />
         <Route exact path="/HowToUsePage" element={<HowToUsePage/>} />

@@ -72,7 +72,6 @@ const Footer = (data) => {
         if(code.length>30) {
             return (
                 <div>
-                    <div>길이 제한 초과입니다. 다시 조정해 주세요</div>
                     <div>your code is longer than maxlength</div>
                 </div>
             )
