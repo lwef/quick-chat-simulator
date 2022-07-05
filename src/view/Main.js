@@ -147,7 +147,7 @@ function Main() {
                 <button style={{background:italicColor}} onClick={onChangeItalic}>{italicState}</button>
             </div>
             </div>
-            <div style={{height:100}}></div>
+            <div className='main__bottom'></div>
         </div>
     )
 }

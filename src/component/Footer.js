@@ -72,7 +72,7 @@ const Footer = (data) => {
         if(code.length>30) {
             return (
                 <div>
-                    <div>your code is longer than maxlength</div>
+                    <div className='footer__altert'>❗Code exceeds maximum length❗</div>
                 </div>
             )
         }
@@ -88,18 +88,20 @@ const Footer = (data) => {
             <div style={showStyle} className="footer__show" >
                 {word}
             </div>
-            <input placeholder='write your word' value={word} maxLength = '30' onChange={onChangeWord}/>
-            <div>
-                <input 
-                    className="footer__code" 
-                    placeholder='code'
-                    value={code} /* value={data.sendData} */
-                    readOnly
-                />
+            <div className='footer__else'>
+            <input className='footer__input' placeholder='write your word' value={word} maxLength = '30' onChange={onChangeWord}/>
+                <div>
+                    <input 
+                        className="footer__code" 
+                        placeholder='code'
+                        value={code} /* value={data.sendData} */
+                        readOnly
+                    />
+                    <button onClick={handleCopy}>
+                        copy
+                    </button>
+                </div>
                 {alertMaxLength()}
-                <button onClick={handleCopy}>
-                    copy
-                </button>
             </div>
         </div>
     )
