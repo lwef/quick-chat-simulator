@@ -38,7 +38,7 @@ function Main() {
         const result = [];
         const numOfColor = colorSet.length;
         for (let i=0; i<numOfColor; i++) {
-            result.push(<div key={i} style={{background:colorSet[i]}} onClick = {()=> {
+            result.push(<div className='paletteColor' key={i} style={{background:colorSet[i]}} onClick = {()=> {
                 console.log(colorSet[i]);
                 setColor(colorSet[i]);
                 setColorButton('#f16969'); //default color 버튼 비활성화의 표시로 빨간색으로 바꿈
@@ -130,6 +130,7 @@ function Main() {
                 <button style={{background:colorbutton}}onClick={handleColorDefault}>default color</button>
                 </center>
             </div>
+            <div className='main__smallBoxContainer'>
             <div className='main__smallBox'>
                 select bold ?
                 <button style={{background:boldColor}} onClick={onChangeBold}>{boldState}</button>
@@ -145,7 +146,8 @@ function Main() {
                 select italic ?
                 <button style={{background:italicColor}} onClick={onChangeItalic}>{italicState}</button>
             </div>
-            <div style={{height:100}}></div>
+            </div>
+            <div className='main__bottom'></div>
         </div>
     )
 }

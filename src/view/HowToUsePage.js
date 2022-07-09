@@ -1,9 +1,10 @@
 import React from 'react';
+import './HowToUsePage.css';
 
 function HowToUsePage() {
     return (
-        <div>
-            <h2>How To Use Quick Chat Simulator</h2>
+        <div className='HowToUse'>
+            <h2>How To Use<br/>Quick Chat Simulator</h2>
             <h3>Step 1</h3>
             <p>Select options. - color, bold, size, italic</p>
             <p>You can choose <span style={{color:"red"}}>one or two options</span> because of <span style={{color:"red"}}>code length limit.</span></p>

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: cadetblue;
+    background-color: cadetblue; /*#6a8b8d*/
 }
 
 .navbar__logo {
@@ -11,10 +11,33 @@
 
 .navbar__menu {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     padding: 5px;
     width: 30%;
-    background-color: aquamarine;
+    background-color: #bef0f2;
     border-radius: 3px;
+}
+
+.navbar__menu div:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar__logo {
+        margin-top: 10px;
+    }
+    .navbar__menu {
+        /*flex-direction: column;*/
+        margin: 8px 0;
+        width: 95%;
+    }
+    .navbar__menu div {
+        margin: 0 10px;
+    }
 }
