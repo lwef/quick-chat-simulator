@@ -1,3 +1,17 @@
 .HowToUse p {
-    margin: 10px;
+    margin: 20px;
+    text-align: left;
+}
+
+.HowToUse h3 {
+    margin: 20px;
+    text-align: left;
+}
+
+
+@media screen and (min-width: 600px) {
+    .HowToUse div {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }

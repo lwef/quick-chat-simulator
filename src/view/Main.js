@@ -39,7 +39,7 @@ function Main() {
         const numOfColor = colorSet.length;
         for (let i=0; i<numOfColor; i++) {
             result.push(<div className='paletteColor' key={i} style={{background:colorSet[i]}} onClick = {()=> {
-                console.log(colorSet[i]);
+                //console.log(colorSet[i]);
                 setColor(colorSet[i]);
                 setColorButton('#f16969'); //default color 버튼 비활성화의 표시로 빨간색으로 바꿈
             }}></div>);

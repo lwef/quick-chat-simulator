@@ -65,9 +65,13 @@ function InfoPage() {
     <center>
         <div id='intro'>
             <h2>Information</h2>
-            This is a fan website of the game<br/> "Castle Defense Online". <br/><br/>
-            Supported tag, supported color information is based on the Unity official &nbsp;
-            <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">documentation.</a>
+            <div className='InfoPage__box'>
+                This is a fan website of the game<br/> 
+                <span style={{color:"red"}}>"Castle Defense Online".</span>
+                <br/><br/>
+                Supported tag, supported color information is based on the Unity official &nbsp;
+                <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">documentation.</a>
+            </div>
         </div>
         <div>
             <h2>Open Source License</h2>
@@ -85,9 +89,16 @@ function InfoPage() {
                 </pre>
             </div>
         </div>
+        <div className='Spacing'></div>
         <div>
-            <h2>Developer</h2>
-            <p onClick={()=>{alert("nickname: 비올")}}>lwef</p>
+            <h2>
+                <div className='Hidden__1' onClick={()=>{
+                alert("nickname: 비올")}}>a</div>
+                Developer
+                <div className='Hidden__2' onClick={()=>{
+                alert("Mfno.1")}}>a</div>
+            </h2>
+            <p>lwef</p>
         </div>
     </center>
     )
