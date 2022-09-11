@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: cadetblue; /*#6a8b8d*/
+    background-color: var(--google-blue-900);
+    /*background-color: cadetblue; #6a8b8d*/
+    color: var(--google-blue-50);
 }
 
 .navbar__logo {
@@ -16,7 +18,7 @@
     justify-content: space-evenly;
     padding: 5px;
     width: 30%;
-    background-color: #bef0f2;
+    /*background-color: #bef0f2;*/
     border-radius: 3px;
 }
 

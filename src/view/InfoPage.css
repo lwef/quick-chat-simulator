@@ -29,7 +29,7 @@ html {
 }
 
 #intro {
-    margin: 10px;
+    /*margin: 10px;*/
     font-size: 18px;
 }
 
@@ -77,4 +77,20 @@ html {
 pre {
     white-space: pre;
     overflow: auto;
+}
+
+.Spacing {
+    height: 50px;
+}
+
+.Hidden__1 {
+    width: 7%;
+    float: left;
+    color: transparent;
+}
+
+.Hidden__2 {
+    width: 7%;
+    float: right;
+    color: transparent;
 }
