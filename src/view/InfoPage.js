@@ -81,14 +81,6 @@ function InfoPage() {
                 )
             })}
         </div>
-        <div>
-            <h2>License</h2>
-            <div className='InfoPage__box'>
-                <pre>
-                MIT License<br/>
-                </pre>
-            </div>
-        </div>
         <div className='Spacing'></div>
         <div>
             <h2>
@@ -98,10 +90,21 @@ function InfoPage() {
                 <div className='Hidden__2' onClick={()=>{
                 alert("Mfno.1")}}>a</div>
             </h2>
-            <p>lwef</p>
+            <p className='Hidden__3'>lwef</p>
         </div>
     </center>
     )
 }
+
+/*
+        <div>
+            <h2>License</h2>
+            <div className='InfoPage__box'>
+                <pre>
+                MIT License<br/>
+                </pre>
+            </div>
+        </div>
+*/
 
 export default InfoPage;

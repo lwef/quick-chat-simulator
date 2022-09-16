@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Footer.css'
 
 const Footer = (data) => {
@@ -89,7 +89,7 @@ const Footer = (data) => {
                 {word}
             </div>
             <div className='footer__else'>
-            <input className='footer__input' placeholder='write your word' value={word} maxLength = '30' onChange={onChangeWord}/>
+            <input className='footer__input' placeholder='write your word here!!' value={word} maxLength = '30' onChange={onChangeWord}/>
                 <div>
                     <input 
                         className="footer__code" 

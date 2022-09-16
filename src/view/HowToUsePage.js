@@ -9,7 +9,7 @@ function HowToUsePage() {
                 <h3>Step 1</h3>
                 <p>Select options. - color, bold, size, italic</p>
                 <p>You can choose <span style={{color:"red"}}>one or two options</span> because of <span style={{color:"red"}}>code length limit.</span></p>
-                <p>If you want to remove color or size code, click "default color" or "default size" button.</p>
+                <p>If you want to remove color or size code, click <span style={{color:"red"}}>"default color" or "default size" button.</span></p>
                 <h3>Step 2</h3>
                 <p>Write down your chat.</p>
                 <h3>Step 3</h3>
