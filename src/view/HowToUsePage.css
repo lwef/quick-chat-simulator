@@ -8,6 +8,10 @@
     text-align: left;
 }
 
+.HowToUse h2 {
+    color: var(--product-text-color);
+}
+
 
 @media screen and (min-width: 600px) {
     .HowToUse div {

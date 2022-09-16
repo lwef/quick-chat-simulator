@@ -33,6 +33,10 @@ html {
     font-size: 18px;
 }
 
+h2 {
+    color: var(--product-text-color);
+}
+
 .InfoPage__box {
     background-color: var(--product-background);
     border-radius: 5px;
@@ -92,5 +96,9 @@ pre {
 .Hidden__2 {
     width: 7%;
     float: right;
+    color: transparent;
+}
+
+.Hidden__3 {
     color: transparent;
 }
