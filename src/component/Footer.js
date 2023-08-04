@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css'
+import magi from '../asset/magi.png';
 
 const Footer = (data) => {
     const [code, setCode] = useState('');
@@ -88,6 +89,7 @@ const Footer = (data) => {
             <div style={showStyle} className="footer__show" >
                 {word}
             </div>
+            <div><img src={magi} width="65px" height="65px" alt="CDO Logo"></img></div>
             <div className='footer__else'>
             <input className='footer__input' placeholder='write your word here!!' value={word} maxLength = '30' onChange={onChangeWord}/>
                 <div>

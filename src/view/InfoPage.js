@@ -1,6 +1,7 @@
 import React from 'react';
 import './InfoPage.css';
 import License from './License';
+import logo from '../asset/CDO.jpg';
 
 function InfoPage() {
 
@@ -68,7 +69,9 @@ function InfoPage() {
             <div className='InfoPage__box'>
                 This is a fan website of the game<br/> 
                 <span style={{color:"red"}}>"Castle Defense Online".</span>
-                <br/><br/>
+                <br/>
+                <img src={logo} width="100px" height="100px" alt="CDO Logo"></img>
+                <br/>
                 Supported tag, supported color information is based on the Unity official &nbsp;
                 <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">documentation.</a>
             </div>
