@@ -62,6 +62,12 @@ function InfoPage() {
             title: "chromium",
             homepage: "https://www.chromium.org/chromium-projects/",
             copyright: "Copyright (c) 2015 The Chromium Authors."
+        },
+        {
+            type: "mit",
+            title: "i18next",
+            homepage: "https://github.com/i18next/i18next",
+            copyright: "Copyright (c) 2023 i18next"
         }
     ]
 
