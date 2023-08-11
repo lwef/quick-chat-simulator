@@ -138,7 +138,7 @@ function Main() {
             <div className='main__smallBoxContainer'>
             <div className='main__smallBox'>
                 {t('main.selectBold')}
-                <button style={{background:boldColor}} onClick={onChangeBold}>{boldState==='yes'? t('main.yes') : t('main.no')}</button> //조건부 렌더링
+                <button style={{background:boldColor}} onClick={onChangeBold}>{boldState==='yes'? t('main.yes') : t('main.no')}</button>
             </div>
             <div className='main__smallBox'>
                 {t('main.selectSize')}<br/>
