@@ -1,0 +1,41 @@
+{
+    "nav": {
+      "appName" : "QuickChat Simulator✏️",
+      "mainPage" : "Home",
+      "howToUse" : "How To Use",
+      "info" : "Info"
+    },
+    "footer": {
+      "placeholder" : "write your word here!!",
+      "code" : "code",
+      "copy" : "copy",
+      "exceedAlert" : "Code exceeds maximum length"
+    },
+    "main" : {
+        "chooseColor" : "Choose Color",
+        "defaultColor" : "Default Color",
+        "defaultSize" : "Default Size",
+        "selectBold" : "Select Bold ?",
+        "selectSize" : "Select Size",
+        "selectItalic" : "Select Itatlic ?",
+        "yes" : "yes",
+        "no" : "no"
+    },
+    "howToUse": {
+        "title" : "How To Use<br/>Quick Chat Simulator",
+        "step" : "step",
+        "instruction1" : "Write down your chat. (e.g. HELP)",
+        "instruction2-1" : "Select options. - color, bold, size, italic",
+        "instruction2-2" : "Because of <0>code length limit,</0> you can choose <0>one or two options</0>",
+        "instruction2-3" : "Click <0>'default color' or 'default size' button</0> to remove color or size code,",
+        "instruction3" : "Modify options.",
+        "instruction4" : "See result, copy code, and paste at quick chat setting in game."
+    },
+    "info" : {
+      "info1" : "This is a fan website of the game <0></0> <1>{{value}}</1>",
+      "info2" : "a",
+      "support1" : "Supported tag, supported color information",
+      "support2" : "Unity official",
+      "support3" : "documentation."
+    }
+  }

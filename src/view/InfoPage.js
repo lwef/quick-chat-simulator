@@ -3,7 +3,10 @@ import './InfoPage.css';
 import License from './License';
 import logo from '../asset/CDO.jpg';
 
+import { useTranslation, Trans } from "react-i18next"; //i18n
+
 function InfoPage() {
+    const { t } = useTranslation();     //i18n
 
     const licenseData = [
         {
@@ -67,13 +70,12 @@ function InfoPage() {
         <div id='intro'>
             <h2>Information</h2>
             <div className='InfoPage__box'>
-                This is a fan website of the game<br/> 
-                <span style={{color:"red"}}>"Castle Defense Online".</span>
+                <Trans i18nKey="info.info1" components={[<br></br>, <span style={{color:"red"}}></span>]} values={{value: "Castle Defense Online"}}/>
                 <br/>
                 <img src={logo} width="100px" height="100px" alt="CDO Logo"></img>
                 <br/>
-                Supported tag, supported color information is based on the Unity official &nbsp;
-                <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">documentation.</a>
+                {t('info.support1')} ➡️ {t('info.support2')} &nbsp;
+                <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html">{t('info.support3')}</a>
             </div>
         </div>
         <div>

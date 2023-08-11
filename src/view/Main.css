@@ -9,12 +9,14 @@
     width: 340px;
     margin: 10px;
     background-color: cornsilk;
+    border-radius: 5px;
 }
 
 .main__colorPick2 {
     width: 340px;
     margin: 10px;
     background-color: cornsilk;
+    border-radius: 5px;
 }
 
 center {
@@ -45,6 +47,7 @@ center {
     width: 100px;
     margin: 10px;
     background-color: cornsilk;
+    border-radius: 5px;
 }
 
 button {
@@ -67,6 +70,7 @@ button {
         height: 150px;
     }
 }
+
 @media screen and (max-width: 400px) {
     .main__smallBoxContainer {
         flex-direction: column;
