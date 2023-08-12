@@ -1,0 +1,41 @@
+{
+    "nav": {
+      "appName" : "퀵챗 시뮬레이터✏️",
+      "mainPage" : "홈",
+      "howToUse" : "사용법",
+      "info" : "정보"
+    },
+    "footer": {
+      "placeholder" : "여기에 채팅을 입력하세요!!",
+      "code" : "완성된 코드",
+      "copy" : "복사",
+      "exceedAlert" : "최대 길이 초과입니다! 옵션이나 채팅을 줄여보세요"
+    },
+    "main" : {
+        "chooseColor" : "색상 선택",
+        "defaultColor" : "기본 컬러",
+        "defaultSize" : "기본 크기",
+        "selectBold" : "글씨 굵게 ?",
+        "selectSize" : "글씨 크기",
+        "selectItalic" : "글씨 기울게 ?",
+        "yes" : "네",
+        "no" : "아니오"
+    },
+    "howToUse": {
+        "title" : "퀵챗 시뮬레이터를 사용하는 방법",
+        "step" : "단계",
+        "instruction1" : "검은 박스 아래의 입력칸에 채팅(예: 헬프)을 입력하세요.",
+        "instruction2-1" : "글씨 색상, 크기, 볼드체, 이탤릭체 옵션을 선택해 보세요.",
+        "instruction2-2" : "<0>길이 제한</0>이 있기 때문에, <0>하나 또는 두개</0>의 옵션만 선택하세요.",
+        "instruction2-3" : "<0>'기본 컬러'나 '기본 크기'</0> 버튼을 눌러 색상과 크기 옵션을 삭제할 수 있어요.",
+        "instruction3" : "옵션을 수정하거나 채팅 길이를 수정하세요.",
+        "instruction4" : "완성된 코드를 복사 버튼을 눌러 복사한 뒤 인게임 퀵챗 설정에 붙여넣기하세요."
+    },
+    "info" : {
+      "info1" : "<1>{{value}}(성지키기 온라인)</1>의 <0></0> 팬 웹사이트입니다.",
+      "info2" : "ㅇ",
+      "support1" : "지원되는 태그, 색상 정보",
+      "support2" : "Unity 공식",
+      "support3" : "문서"
+    }
+  }

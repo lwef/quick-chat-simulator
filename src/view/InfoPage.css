@@ -49,6 +49,10 @@ h2 {
     padding: 2px;
 }
 
+.InfoPage__box>img {
+    border-radius: 5px;
+}
+
 .InfoPage__box .title {
     float: left;
     font-size: 110%;

@@ -3,7 +3,10 @@ import Footer from '../component/Footer';
 import './Main.css';
 import { ChromePicker } from 'react-color';
 
+import { useTranslation } from "react-i18next"; //i18n
+
 function Main() {
+    const { t } = useTranslation();     //i18n
     const [color, setColor] = useState(false);
     const [bold, setBold] = useState(false);
     const [size, setSize] = useState(0);
@@ -67,10 +70,9 @@ function Main() {
         return result;
     }
 
-    const onChangeBold = (e) => {
-        e.preventDefault();
+    const onChangeBold = () => {
+        
         setBold(!bold);
-        //console.log(bold);
         
         if(boldState==='yes') {
             setBoldState('no');
@@ -80,7 +82,10 @@ function Main() {
             setBoldState('yes');
             setBoldColor('#a7ffa7');
         }
-      }
+    }
+
+
+
     const onChangeSize = (size) => {
         setSize(size);
         setSizeButtonColor('#f16969');
@@ -111,14 +116,14 @@ function Main() {
         <div className='main'>
             <Footer sendData={data}/>
             <div className='main__colorPick' style={{background:color}}>
-                choose color #1<br/>
+                {t('main.chooseColor')} #1<br/>
                 <div className='colorWrap'>
                     {colorPicker1()}
                 </div>
             </div>
             <div className='main__colorPick2' style={{background:color}}>
                 <center>
-                choose color #2<br/>
+                {t('main.chooseColor')} #2<br/>
                 <ChromePicker
                     color={color}
                     onChange={color => handleColorChange(color.hex)}
@@ -127,24 +132,24 @@ function Main() {
                     value={color}
                     onChange={e => handleColorChange(e.target.value)}
                 />
-                <button style={{background:colorbutton}}onClick={handleColorDefault}>default color</button>
+                <button style={{background:colorbutton}}onClick={handleColorDefault}>{t('main.defaultColor')}</button>
                 </center>
             </div>
             <div className='main__smallBoxContainer'>
             <div className='main__smallBox'>
-                select bold ?
-                <button style={{background:boldColor}} onClick={onChangeBold}>{boldState}</button>
+                {t('main.selectBold')}
+                <button style={{background:boldColor}} onClick={onChangeBold}>{boldState==='yes'? t('main.yes') : t('main.no')}</button>
             </div>
             <div className='main__smallBox'>
-                select size<br/>
+                {t('main.selectSize')}<br/>
                 <select value={size} onChange={(e) => {onChangeSize(e.target.value)}}>
                     {chatSize()}
                 </select>
-                <button style={{background:sizeButtonColor}}onClick={handleSizeDefault}>default size</button>
+                <button style={{background:sizeButtonColor}}onClick={handleSizeDefault}>{t('main.defaultSize')}</button>
             </div>
             <div className='main__smallBox'>
-                select italic ?
-                <button style={{background:italicColor}} onClick={onChangeItalic}>{italicState}</button>
+                {t('main.selectItalic')}
+                <button style={{background:italicColor}} onClick={onChangeItalic}>{italicState==='yes'? t('main.yes') : t('main.no')}</button>
             </div>
             </div>
             <div className='main__bottom'></div>

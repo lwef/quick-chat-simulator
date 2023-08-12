@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css'
+import magi from '../asset/magi.png';
+
+import { useTranslation } from "react-i18next"; //i18n
 
 const Footer = (data) => {
+    const { t } = useTranslation();     //i18n
     const [code, setCode] = useState('');
     const [word, setWord] = useState('');
     const [showStyle, setShowStyle] = useState(
@@ -72,7 +76,7 @@ const Footer = (data) => {
         if(code.length>30) {
             return (
                 <div>
-                    <div className='footer__altert'>❗Code exceeds maximum length❗</div>
+                    <div className='footer__alert'>❗{t('footer.exceedAlert')}❗</div>
                 </div>
             )
         }
@@ -85,20 +89,24 @@ const Footer = (data) => {
 
     return (
         <div className="footer">
-            <div style={showStyle} className="footer__show" >
-                {word}
+            <div className="footer__show__img">
+                <div style={showStyle} className="footer__show" >
+                    {word}
+                </div>
+                <div><img src={magi} width="65px" height="65px" alt="CDO Logo"></img></div>
             </div>
+            
             <div className='footer__else'>
-            <input className='footer__input' placeholder='write your word here!!' value={word} maxLength = '30' onChange={onChangeWord}/>
+            <input className='footer__input' placeholder={t('footer.placeholder')} value={word} maxLength = '30' onChange={onChangeWord}/>
                 <div>
                     <input 
                         className="footer__code" 
-                        placeholder='code'
+                        placeholder={t('footer.code')}
                         value={code} /* value={data.sendData} */
                         readOnly
                     />
                     <button onClick={handleCopy}>
-                        copy
+                        {t('footer.copy')}
                     </button>
                 </div>
                 {alertMaxLength()}
